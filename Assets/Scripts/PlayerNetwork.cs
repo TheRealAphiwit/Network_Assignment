@@ -29,12 +29,10 @@ public class PlayerNetwork : NetworkBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!IsOwner) return;
 
-        // Move player object along x-axis based on input
         transform.position += moveSpeed * Time.deltaTime * new Vector3(moveInput.y, 0, 0);
     }
 
@@ -57,7 +55,8 @@ public class PlayerNetwork : NetworkBehaviour
     {
         if (gameManagerInstance != null)
         {
-            gameManagerInstance.PlayerReadyStatusChanged(IsOwner, newValue);  // Notify GameManager of the change
+            // Notify GameManager of the change
+            gameManagerInstance.PlayerReadyStatusChanged(IsOwner, newValue);  
         }
     }
 }

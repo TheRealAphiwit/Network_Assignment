@@ -8,7 +8,6 @@ public class PaddlePossesion : MonoBehaviour
     // Paddles
     [SerializeField] private GameObject paddles;
 
-    // Start is called before the first frame update
     void Start()
     {
         // Search for paddleholder using tag

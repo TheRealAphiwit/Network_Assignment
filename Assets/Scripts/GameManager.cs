@@ -127,7 +127,7 @@ public class GameManager : NetworkBehaviour
 
             Debug.Log("Player Hit!");
 
-            // Determine which side the player is on (use Z-axis instead of X-axis for left-right movement)
+            // Determine which side the player is on 
             if (other.transform.position.z < transform.position.z)
             {
                 transform.right = Vector3.Reflect(transform.right, Vector3.forward);
@@ -147,11 +147,11 @@ public class GameManager : NetworkBehaviour
 
     private void UpdatePlayer1ScoreUI(int previousValue, int newValue)
     {
-        player1ScoreText.text = newValue.ToString(); // Update the player 1 score text on all clients
+        player1ScoreText.text = newValue.ToString();
     }
 
     private void UpdatePlayer2ScoreUI(int previousValue, int newValue)
     {
-        player2ScoreText.text = newValue.ToString(); // Update the player 2 score text on all clients
+        player2ScoreText.text = newValue.ToString(); 
     }
 }
